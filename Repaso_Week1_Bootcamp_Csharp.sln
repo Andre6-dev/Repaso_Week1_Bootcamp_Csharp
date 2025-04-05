@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repaso_Week1_Bootcamp_Csharp", "Repaso_Week1_Bootcamp_Csharp\Repaso_Week1_Bootcamp_Csharp.csproj", "{57357EC6-A685-48AA-BF39-8E2CC6070110}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhileLoop", "WhileLoop\WhileLoop.csproj", "{79AB55ED-0614-46F9-899E-419CD0E6CFC6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{57357EC6-A685-48AA-BF39-8E2CC6070110}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57357EC6-A685-48AA-BF39-8E2CC6070110}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57357EC6-A685-48AA-BF39-8E2CC6070110}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79AB55ED-0614-46F9-899E-419CD0E6CFC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79AB55ED-0614-46F9-899E-419CD0E6CFC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79AB55ED-0614-46F9-899E-419CD0E6CFC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79AB55ED-0614-46F9-899E-419CD0E6CFC6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

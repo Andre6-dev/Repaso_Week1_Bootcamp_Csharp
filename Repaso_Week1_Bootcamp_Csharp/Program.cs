@@ -137,5 +137,11 @@ internal class Program
                 Console.WriteLine("La opcion es incorrecta: ");
                 break;
         }
+
+        Console.WriteLine("La opcion es incorrecta: ");
+        Console.WriteLine("La opcion es incorrecta: ");
+        Console.WriteLine("La opcion es incorrecta: ");
+        Console.WriteLine("La opcion es incorrecta: ");
+
     }
 }
