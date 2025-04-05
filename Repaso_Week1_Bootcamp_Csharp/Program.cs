@@ -60,5 +60,22 @@ internal class Program
         {
             Console.WriteLine("El numero es impar");
         }
+
+        int primerNumero;
+        int segundoNumero;
+        int tercerNumero;
+        Console.WriteLine("");
+        Console.WriteLine("============================");
+        Console.WriteLine("Cual es el numero mayor de 3 numeros ");
+        Console.WriteLine("============================");
+        primerNumero = Convert.ToInt32(Console.ReadLine());
+        segundoNumero = Convert.ToInt32(Console.ReadLine());
+        tercerNumero = Convert.ToInt32(Console.ReadLine());
+
+        // Escribir la logica del programa
+        Console.WriteLine("");
+        Console.WriteLine("============================");
+        Console.WriteLine("Dame la opcion de que area es para comprobar ");
+        Console.WriteLine("============================");
     }
 }
