@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "WhileLoop": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

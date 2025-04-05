@@ -50,5 +50,52 @@ internal class Program
         // 1 2 3 4 *
         // 1 2 3 4 5
 
+        Console.WriteLine("Ingresa el valor");
+        int valorPatron = Convert.ToInt32(Console.ReadLine());
+        int start = 1;
+        while (start <= valorPatron)
+        {
+            Console.Write("");
+            int valorSegundoLoop = 1;
+            while (valorSegundoLoop <= start)
+            {
+                Console.Write(valorSegundoLoop + " ");
+                valorSegundoLoop++;
+            }
+            Console.WriteLine("*");
+            start++;
+        }
+
+        int contadorDo = 1;
+        do
+        {
+            Console.WriteLine(contadorDo);
+            contadorDo++;
+        } while (contadorDo <= 6);
+
+        Console.ReadKey();
+
+
+        // Crear un bucle tipo for
+        for (int i = 1; i <= 10; i++)
+        {
+            Console.WriteLine("El valor del bucle for es: " + i);
+            // for (int j = 0; j < i; j++)
+            // {
+            //     Console.Write(j + " ");
+            // }
+        }
+
+        // 1 Challenge
+        // Write a program in C# Sharp to display the multiplication table of a given integer.
+        //     Test Data:
+        // Input the number(Table to be calculated) : 15
+        // Expected Output :
+        // 15 X 1 = 15...
+        // ...
+        // 15 X 10 = 150
+
+        // 2 Challenge
+        // EL mismo patron que hicimos con while pero con for
     }
 }
