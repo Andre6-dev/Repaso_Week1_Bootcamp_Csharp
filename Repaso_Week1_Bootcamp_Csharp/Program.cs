@@ -68,14 +68,74 @@ internal class Program
         Console.WriteLine("============================");
         Console.WriteLine("Cual es el numero mayor de 3 numeros ");
         Console.WriteLine("============================");
+        Console.WriteLine("Escribe el primer numero: ");
         primerNumero = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Escribe el segundo numero: ");
         segundoNumero = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Escribe el tercer numero: ");
         tercerNumero = Convert.ToInt32(Console.ReadLine());
 
-        // Escribir la logica del programa
+        if (primerNumero > segundoNumero)
+        {
+            if (primerNumero > tercerNumero)
+            {
+                Console.WriteLine("El primer numero es el mayor");
+            }
+            else
+            {
+                Console.Write("El tercer numero es el mayor");
+            }
+        }
+        else if (segundoNumero > tercerNumero)
+        {
+            Console.WriteLine("El segundo numero es el mayor");
+        }
+        else
+        {
+            Console.WriteLine("El tercer numero es el mayor");
+        }
+
+        // Obtener el area del circulo o del cuadrado
         Console.WriteLine("");
         Console.WriteLine("============================");
         Console.WriteLine("Dame la opcion de que area es para comprobar ");
         Console.WriteLine("============================");
+
+        // Comprobar si has escogido circulo o rectangulo
+        // Si es circulo necesito que me pidas el radio
+        // Si has elegido rectangulo, te tendria que pedir largo y ancho
+        // Si has escogido una opcion que no es circulo o rectangulo un mensaje de error
+        int opcionArea;
+        int r;
+        int largo;
+        int ancho;
+        double pi;
+        double area;
+        Console.WriteLine("Ingresa la opcion del area a calcular");
+        Console.WriteLine("1. Area del circulo");
+        Console.WriteLine("2. Area del rectangulo");
+        opcionArea = Convert.ToInt32(Console.ReadLine());
+
+        switch (opcionArea)
+        {
+            case 1:
+                Console.WriteLine("Ingresa el radio del circulo");
+                r = Convert.ToInt32(Console.ReadLine());
+                pi = 3.14;
+                area = pi * r * r;
+                Console.WriteLine("El area del circulo es: " + area);
+                break;
+            case 2:
+                Console.WriteLine("Ingresa el largo del rectangulo");
+                largo = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Ingresa el ancho del rectangulo");
+                ancho = Convert.ToInt32(Console.ReadLine());
+                area = largo * ancho;
+                Console.WriteLine("El area del rectangulo es: " + area);
+                break;
+            default:
+                Console.WriteLine("La opcion es incorrecta: ");
+                break;
+        }
     }
 }
