@@ -174,4 +174,11 @@ internal class Program
         public double Precio { get; set; }
         public int Stock { get; set; }
     }
+
+    class Libro
+    {
+        public string Nombre { get; set; }
+        public double Precio { get; set; }
+        public int Stock { get; set; }
+    }
 }
