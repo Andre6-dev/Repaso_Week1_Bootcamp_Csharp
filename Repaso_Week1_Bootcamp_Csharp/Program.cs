@@ -143,5 +143,23 @@ internal class Program
         Console.WriteLine("La opcion es incorrecta: ");
         Console.WriteLine("La opcion es incorrecta: ");
 
+        // Llamada de la funcion.
+        int x, y;
+        x = 10;
+        y = 20;
+
+        int suma = Add(x, y);
+
+        Console.WriteLine(suma);
+
+        // creando array de notas
+        int[] notas = { 1, 2, 3, 4, 5, 6 };
+
+    }
+
+    public static int Add(int a, int b)
+    {
+        int result = a + b;
+        return result;
     }
 }
