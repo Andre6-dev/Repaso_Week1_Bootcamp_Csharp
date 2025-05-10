@@ -4,32 +4,42 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        // Console.WriteLine("ARRAYS UNIDIMENSIONALES EN C#");
-        // Console.WriteLine("============================\n");
-        //
-        // // 1. Declaración e inicialización de un array
-        // Console.WriteLine("1. Declaración e inicialización:");
-        //
-        // // Forma 1: Declarar y luego inicializar
-        // int[] numeros = new int[5]; // Array de 5 enteros
-        // numeros[0] = 10;
-        // numeros[1] = 20;
-        // numeros[2] = 30;
-        // numeros[3] = 40;
-        // numeros[4] = 50;
+        Console.WriteLine("ARRAYS UNIDIMENSIONALES EN C#");
+        Console.WriteLine("============================\n");
+
+        // 1. Declaración e inicialización de un array
+        Console.WriteLine("1. Declaración e inicialización:");
+
+        // Forma 1: Declarar y luego inicializar
+        int[] numeros = new int[5]; // Array de 5 enteros
+        numeros[0] = 10;
+        numeros[1] = 20;
+        numeros[2] = 30;
+        numeros[3] = 40;
+        numeros[4] = 50;
         //
         // // Forma 2: Declarar e inicializar en una línea
-        // int[] otrosNumeros = new int[] { 10, 20, 30, 40, 50 };
+        int[] otrosNumeros = new int[] { 10, 20, 30, 40, 50 };
         //
         // // Forma 3: Inicialización implícita
-        // string[] nombres = { "Ana", "Juan", "Pedro", "María", "Luis" };
+        string[] nombres = { "Ana", "Juan", "Pedro", "María", "Luis" };
         //
         // // 2. Acceso a los elementos
-        // Console.WriteLine("\n2. Acceso a los elementos:");
-        // Console.WriteLine($"El primer número es: {numeros[0]}"); // 10
-        // Console.WriteLine($"El tercer nombre es: {nombres[2]}"); // Pedro
-        // Console.WriteLine($"El ultimo nombre es: {nombres[4]}"); // Luis
-        //
+        Console.WriteLine("\n2. Acceso a los elementos:");
+        Console.WriteLine($"El primer número es: {numeros[0]}"); // 10
+        Console.WriteLine($"El tercer nombre es: {nombres[2]}"); // Pedro
+        Console.WriteLine($"El ultimo nombre es: {nombres[4]}"); // Luis
+
+        // For loop recorriendo arreglo
+        for (int i = 0; i < otrosNumeros.Length; i++)
+        {
+            Console.WriteLine("El valor del array es: " + otrosNumeros[i]);
+        }
+
+        // foreach (int num in copiaNumeros)
+        //     Console.Write($"{num} ");
+
+
         // // 3. Obtener la longitud del array
         // Console.WriteLine("\n3. Longitud del array:");
         // Console.WriteLine($"El array de números tiene {numeros.Length} elementos");
@@ -94,13 +104,13 @@ internal class Program
         // Console.WriteLine($"\nLa naranja está en el índice: {indice}");
         //
         // // Copiar un array
-        // int[] copiaNumeros = new int[numeros.Length];
-        // Array.Copy(numeros, copiaNumeros, numeros.Length);
-        // Console.Write("\nArray copiado: ");
-        // foreach (int num in copiaNumeros)
-        //     Console.Write($"{num} ");
-        //
-        // Console.WriteLine("\n");
+        int[] copiaNumeros = new int[numeros.Length];
+        Array.Copy(numeros, copiaNumeros, numeros.Length);
+        Console.Write("\nArray copiado: ");
+        foreach (int num in copiaNumeros)
+            Console.Write($"{num} ");
+
+        Console.WriteLine("\n");
 
         /*
         RETO: SISTEMA DE CALIFICACIONES

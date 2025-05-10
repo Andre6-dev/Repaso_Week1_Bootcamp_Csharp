@@ -11,6 +11,7 @@ internal class Program
         Console.WriteLine("1. Creación e inicialización:");
 
         // Forma 1: Constructor vacío
+        // <> Generico aceptan objetos
         List<int> numeros = new List<int>();
         numeros.Add(10);
         numeros.Add(20);
@@ -110,27 +111,18 @@ internal class Program
         Console.WriteLine("\n10. Métodos de búsqueda avanzados:");
 
         // Crear una lista de personas para demostrar
+        // Se crea una instancia de la clase persona
         List<Persona> personas = new List<Persona>
         {
-            new Persona { Nombre = "Carlos", Edad = 25, Dni  = "7163235"},
-            new Persona { Nombre = "María", Edad = 32, Dni  = "7163235" },
+            new Persona { Nombre = "Carlos", Edad = 25, Dni  = "7163235"}, // arreglo[0] = 1
+            new Persona { Nombre = "María", Edad = 32, Dni  = "7163235" }, // arreglo[1] = 2
             new Persona { Nombre = "Pedro", Edad = 17, Dni  = "7163235" },
             new Persona { Nombre = "Laura", Edad = 42, Dni  = "7163235" },
             new Persona { Nombre = "Miguel", Edad = 19, Dni  = "7163235" }
         };
 
-        List<Libro> libros = new List<Libro>
-        {
-            new Libro
-            {
-                Nombre = "El principito",
-                Precio = 25.99,
-                Stock = 5,
-            }
-        };
-
         // Find - Encontrar la primera persona menor de 18 años
-        Persona menor = personas.Find(p => p.Edad < 18);
+        Persona menor = personas.Find(p => p.Edad < 18); // Funcion lambda es una funcion que no tiene retorno
         Console.WriteLine($"Primera persona menor de edad: {menor.Nombre}, {menor.Edad} años");
 
         // FindAll - Encontrar todas las personas mayores de 30 años
@@ -149,6 +141,49 @@ internal class Program
         // Filtrar los libros con stock de mas de 10 unidades
         // Filtrar el stock por precio mas grande de 10.99 soles
         // Encontrar el indice del libro que empiece con "El"
+
+        List<Libro> libros = new List<Libro>
+        {
+            new Libro { Nombre = "Cien años de soledad", Precio = 15.99, Stock = 20 },
+            new Libro { Nombre = "El señor de los anillos", Precio = 19.50, Stock = 15 },
+            new Libro { Nombre = "Harry Potter", Precio = 12.75, Stock = 30 },
+            new Libro { Nombre = "El principito", Precio = 8.99, Stock = 5 },
+            new Libro { Nombre = "Don Quijote", Precio = 14.25, Stock = 12 },
+            new Libro { Nombre = "La sombra del viento", Precio = 11.50, Stock = 8 },
+            new Libro { Nombre = "1984", Precio = 9.99, Stock = 18 },
+            new Libro { Nombre = "El código Da Vinci", Precio = 13.50, Stock = 22 },
+            new Libro { Nombre = "Rayuela", Precio = 10.25, Stock = 7 },
+            new Libro { Nombre = "Los juegos del hambre", Precio = 16.75, Stock = 25 }
+        };
+
+        var librosStockMayor10 = libros.Where(libro => libro.Stock > 10).ToList();
+
+        Console.WriteLine("Libros con stock mayor a 10 unidades:");
+        foreach (var libro in librosStockMayor10)
+        {
+            Console.WriteLine($"- {libro.Nombre}: {libro.Stock} unidades");
+        }
+
+        // Operación 2: Filtrar el stock por precio más grande de 10.99 soles
+        var librosPrecioMayor10_99 = libros.Where(libro => libro.Precio > 10.99).ToList();
+
+        Console.WriteLine("\nLibros con precio mayor a 10.99 soles:");
+        foreach (var libro in librosPrecioMayor10_99)
+        {
+            Console.WriteLine($"- {libro.Nombre}: S/ {libro.Precio}");
+        }
+
+        // Operación 3: Encontrar el índice del libro que empiece con "El"
+        int indiceLibroEl = libros.FindIndex(libro => libro.Nombre.StartsWith("El"));
+
+        if (indiceLibroEl != -1)
+        {
+            Console.WriteLine($"\nEl libro que empieza con 'El' está en el índice {indiceLibroEl}: {libros[indiceLibroEl].Nombre}");
+        }
+        else
+        {
+            Console.WriteLine("\nNo se encontró ningún libro que empiece con 'El'");
+        }
     }
 
     // Clase auxiliar para demostraciones
@@ -157,6 +192,13 @@ internal class Program
         public string Nombre { get; set; }
         public int Edad { get; set; }
         public string Dni { get; set; }
+    }
+
+    class Fruta
+    {
+        public string Nombre { get; set; }
+        public double Peso { get; set; }
+        public bool estaProdida { get; set; }
     }
 
     class Libro
